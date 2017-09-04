@@ -26,6 +26,7 @@
                             <nav class="pull">
                                 <ul class="top-nav">
                                     <li><a href="#intro">Acerca de Nosotros<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                    <li><a href="#our-reason">Nuestra Razón de Ser<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                     <li><a href="#features">Unidades de Producción Nacionales<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                     <li><a href="#team">¿Qué valoramos?<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                     <li><a href="#responsive">Valores<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
@@ -68,11 +69,19 @@
                         <p>
                             El 15 de octubre de 2015 nace formalmente  la CORPORACIÓN  GRO GR, representando la materialización del sueño de su fundador, Sr. Gustavo Arnaldo Ruiz Pérez, de consolidar e integrar los servicios de producción y comercialización de productos agroindustriales y de la ganadería, orientados a la satisfacción de necesidades y expectativas de consumidores en el mercado nacional e internacional.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="features-wrapper">
+        <section class="reason text-center" id="our-reason">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="reason-wrapper">
                             <h1 class="intro-title">NUESTRA RAZÓN DE SER</h1>
                             <div class="col-md-6 wp2">
-                                <div class="icon-inverse">
+                                <div class="icon-reason">
                                     <i class="fa fa-star shadow"></i>
                                 </div>
                                 <h2 class="intro-title-info">Misión</h2>
@@ -81,7 +90,7 @@
                                 </p>
                             </div>
                             <div class="col-md-6 wp2 delay-05s">
-                                <div class="icon-inverse">
+                                <div class="icon-reason">
                                     <i class="fa fa-bullseye shadow"></i>
                                 </div>
                                 <h2 class="intro-title-info">Visión</h2>
