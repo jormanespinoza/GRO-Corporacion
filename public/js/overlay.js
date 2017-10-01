@@ -28,4 +28,11 @@ $(document).ready(function() {
       $(this).removeClass("hover");
     });
   }
+
+  // Dropdown Menu Fade
+  $(".dropdown").hover(
+      function() { $('.dropdown-menu', this).fadeIn("fast");
+      },
+      function() { $('.dropdown-menu', this).fadeOut("fast");
+  });
 });

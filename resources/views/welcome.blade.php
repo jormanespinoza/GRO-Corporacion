@@ -17,7 +17,7 @@
         <script src="https://use.fontawesome.com/fb81e86df5.js"></script>
     </head>
 
-    <body id="top">
+    <body id="top" onload="carousel()">
         <header id="home">
             <nav>
                 <div class="container-fluid">
@@ -28,37 +28,39 @@
                                     <li><a href="#intro">Acerca de Nosotros<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                     <li><a href="#our-reason">Nuestra Razón de Ser<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                     <li><a href="#features">Unidades de Producción Nacionales<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                                    <li><a href="#team">¿Qué valoramos?<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                    <li><a href="#values">¿Qué valoramos?<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                     <li><a href="#responsive">Valores<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                     <li><a href="#features-abroad">Unidades de Producción Internacionales<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                    <li><a href="#products">Productos<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                    <li><a href="#team">Nuestro Equipo<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                     <li><a href="#contact">Contáctanos<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
-            </nav>
 
-            <section class="hero" id="hero">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-right navicon">
-                            <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+                <section class="hero" id="hero">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-right navicon">
+                                <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center inner">
+                                <h1 class="animated fadeInDown">GRO<br><span class="sub-title">CORPORACIÓN</span></h1>
+                                <p class="animated fadeInUp delay-05s sub-title">Productora, comercializadora, exportadora e importadora de productos agropecuarios</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 text-center">
+                                <a href="#intro" class="learn-more-btn">Acerca de Nosotros</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center inner">
-                            <h1 class="animated fadeInDown">GRO<br><span class="sub-title">CORPORACIÓN</span></h1>
-                            <p class="animated fadeInUp delay-05s sub-title">Productora, comercializadora, exportadora e importadora de productos agropecuarios</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3 text-center">
-                            <a href="#intro" class="learn-more-btn">Acerca de Nosotros</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </nav>
         </header>
 
         <section class="intro text-center section-padding" id="intro">
@@ -112,7 +114,7 @@
                         <h1 class="arrow">Unidades de Producción Nacionales</h1>
                         <div class="features-wrapper">
                             <div class="col-md-4 wp2">
-                                <img src="{{ asset('images/quinaroes.jpg')}}" class="enterprises-img">
+                                <img src="{{ asset('images/quinaroes.jpg') }}" class="enterprises-img">
 
                                 <p>
                                     Se encarga de la comercialización productos manufacturados y semi manufacturados nacionales e importados del sector agroindustrial, ganadero y alimenticio destinados a satisfacer demandas del mercado nacional e internacional.
@@ -150,11 +152,11 @@
             </div>
         </section>
 
-        <section class="team text-center section-padding" id="team">
+        <section class="team text-center section-padding" id="values">
             <div class="container">
                 <div class="row">
                     <div class="team-wrapper">
-                        <div id="teamSlider">
+                        <div id="valuesSlider">
                             <ul class="slides">
                                 <li>
                                     <div class="col-md-4 wp5">
@@ -250,7 +252,7 @@
                                         <p>
                                             Ser considerado y considerar a las otras personas.
                                         <p>
-                                            Reconocer la propiedad intelectual de terceros.
+                                            Reconocer la propiedad http://127.0.0.1:8000intelectual de terceros.
                                         </p>
                                         <p>
                                             No se permite el trabajo forzado, explotación de remuneración o trabajo de menores ni la discriminación.
@@ -340,30 +342,232 @@
         </section>
 
         <section class="features text-center section-padding" id="features-abroad">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="arrow">Unidades de Producción Internacionales</h1>
                         <div class="features-wrapper">
-                            <div class="col-md-6 wp2 delay-1s">
+                            {{--  <div class="col-md-2 wp2 delay-1s">
                                 <img src="{{ asset('images/grand_stand.jpg')}}" class="enterprises-img">
 
                                 <p>
                                     Encargada del mercadeo y ventas  de productos alimenticios (nacionales e importados) para el consumo humano, maquinarias de manufactura y empaque para el sector agroindustrial, materia prima e insumos para cria y mantenimiento de  ganado caprino, bovino, porcino, orientados al mercado norteamericano y nacional.
                                 </p>
                             </div>
-                            <div class="col-md-6 wp2 delay-1s">
+                            <div class="col-md-2 wp2 delay-1s">
                                 <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
 
                                 <p>
                                     Aplicada en este caso al mercadeo y ventas de productos alimenticios manufacturados (nacionales e importados) para el consumo humano, maquinarias de manufactura y empaque para el  sector agroindustrial,, orientados al mercado  panameño y nacional.
                                 </p>
+                            </div>  --}}
+                            <div class="col-md-2 wp2 delay-1s">
+                                <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
+                            </div>
+                            <div class="col-md-2 wp2 delay-1s">
+                                <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
+                            </div>
+                            <div class="col-md-2 wp2 delay-1s">
+                                <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
+                            </div>
+                            <div class="col-md-2 wp2 delay-1s">
+                                <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
+                            </div>
+                            <div class="col-md-2 wp2 delay-1s">
+                                <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
+                            </div>
+                            <div class="col-md-2 wp2 delay-1s">
+                                <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
                             </div>
                             <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <div class="ignite-cta text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <a href="#" class="ignite-btn">GRO Productos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="team text-center section-padding" id="products">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow">Nuestros Productos</h1>
+              </div>
+            </div>
+
+            <div class="row">
+                <div id="productSlider">
+                    <ul class="slides">
+                        <li>
+                            <div class="col-md-6 wp5">
+                                <a href="#" target="_blank">
+                                    <img src="{{ asset('images/DummyFrijolesNegros.jpg') }}" alt="Pruducto-GRO">
+                                    <h2>Frijoles Negros</h2>
+                                </a>
+                            </div>
+                            <div class="col-md-6 wp5 delay-05s">
+                                <a href="#" target="_blank">
+                                    <img src="{{ asset('images/DummyFrijolesRojos.jpg') }}" alt="Pruducto-GRO">
+                                    <h2>Frijoles Rojos</h2>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="col-md-6 wp5">
+                                <a href="#" target="_blank">
+                                    <img src="{{ asset('images/DummyGarbanzos.jpg') }}" alt="Pruducto-GRO">
+                                    <h2>Garbanzos</h2>
+                                </a>
+                            </div>
+                            <div class="col-md-6 wp5 delay-0.5s">
+                                <a href="#" target="_blank">
+                                    <img src="{{ asset('images/DummyLentejas.jpg') }}" alt="Pruducto-GRO">
+                                    <h2>Lentejas</h2>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="col-md-6 wp5">
+                                <a href="#" target="_blank">
+                                    <img src="{{ asset('images/DummyHarinaMaizFina.jpg') }}" alt="Pruducto-GRO">
+                                    <h2>Harina de Maíz Fina</h2>
+                                </a>
+                            </div>
+                            <div class="col-md-6 wp5 delay-05s">
+                                <a href="#" target="_blank">
+                                    <img src="{{ asset('images/DummyInstantOats-Avena.jpg') }}" alt="Pruducto-GRO">
+                                    <h2>Avena</h2>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="ignite-cta text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <a href="#" class="ignite-btn">GRO CORPORACIÓN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="team text-center section-padding" id="team">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow">Nuestro Equipo</h1>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="team-wrapper">
+                <div id="teamSlider">
+                  <ul class="slides">
+                    <li>
+                      <div class="col-md-4 wp5">
+                        <img src="{{ asset('images/team-01.png') }}" alt="Team Member">
+                        <h2>Jon Snow</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <div class="social">
+                          <ul class="social-buttons">
+                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                          </ul>
+                          <p class="team-country">Sede - Country</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 wp5 delay-05s">
+                        <img src="{{ asset('images/team-02.png') }}" alt="Team Member">
+                        <h2>Cersei Lannister</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <div class="social">
+                          <ul class="social-buttons">
+                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                          </ul>
+                          <p class="team-country">Sede - Country</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 wp5 delay-1s">
+                        <img src="{{ asset('images/team-03.png') }}" alt="Team Member">
+                        <h2>Jamie Lannister</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <div class="social">
+                          <ul class="social-buttons">
+                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                          </ul>
+                          <p class="team-country">Sede - Country</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="col-md-4 wp5">
+                        <img src="{{ asset('images/team-01.png') }}" alt="Team Member">
+                        <h2>Jon Snow</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <div class="social">
+                          <ul class="social-buttons">
+                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                          </ul>
+                          <p class="team-country">Sede - Country</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4 wp5 delay-05s">
+                        <img src="{{ asset('images/team-02.png') }}" alt="Team Member">
+                        <h2>Cersei Lannister</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <div class="social">
+                          <ul class="social-buttons">
+                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                          </ul>
+                          <p class="team-country">Sede - Country</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4 wp5 delay-1s">
+                        <img src="{{ asset('images/team-03.png') }}" alt="Team Member">
+                        <h2>Jamie Lannister</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                        <div class="social">
+                          <ul class="social-buttons">
+                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                          </ul>
+                          <p class="team-country">Sede - Country</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="dark-bg text-center section-padding contact-wrap" id="contact">

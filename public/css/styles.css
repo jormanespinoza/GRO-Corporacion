@@ -190,13 +190,13 @@ h2::after { content: " "; border: solid 2px #3c1206; display: block; width: 35px
 /* ==========================================================================
 Navigation
 ========================================================================== */
-nav { background-color: #242830; margin-top: -1px; }
+nav { background-color: #3c1206; margin-top: -1px; }
 nav ul { list-style: none; padding: 0; }
 nav ul li { color: rgba(255, 255, 255, 0.6); display: block; border-bottom: 1px dotted rgba(255, 255, 255, 0.2); transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
 nav ul li:last-child { border: none; }
-nav ul li a { color: rgba(255, 255, 255, 0.6); display: block; padding: 20px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
+nav ul li a { color: #fff; display: block; padding: 20px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; padding-left: 0; position: relative; }
 nav ul li a:hover, nav ul li a:focus { text-decoration: none; color: rgba(255, 255, 255, 1); }
-#nav-toggle { position: absolute; right: 15px; top: 0; }
+#nav-toggle { position: absolute; right: 15px; top: 0; }rgba(255, 255, 255, 1)
 #nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after { cursor: pointer; border-radius: 1px; -moz-border-radius: 1px; -webkit-border-radius: 1px; -o-border-radius: 1px; height: 5px; width: 35px; background: #353535; position: absolute; display: block; content: ''; }
 #nav-toggle span:before { top: -10px; }
@@ -215,16 +215,16 @@ Hero
 .hero { background: url('../images/bg-urao.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 65px 0 300px 0; height: auto; }
 .hero h1 { font-size: 40px; letter-spacing: 12px; margin: 10px; }
 .hero h1 span { color: #a1a9b0; display: inline-block; }
-.hero p { letter-spacing: 1px; }
+.hero p { letter-spacing: 1px; text-shadow: 2px 1px #fff; }
 .learn-more-btn { background: #3c1206; padding: 20px 40px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #fff; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #3c1206; -moz-box-shadow: 0px 3px 0px 0px #3c1206; box-shadow: 0px 3px 0px 0px #3c1206; margin: 60px 0 0; font-weight: bold; }
 .learn-more-btn:hover, .learn-more-btn:focus { background: #3c1206; color: #fff; }
 /* ==========================================================================
 Intro
 ========================================================================== */
-.intro { background: #3c1206;}
+.intro { background: #3c1206; }
 .intro p { margin: 50px 0 0; color: #fff; }
-.intro-title { font-size: 15px; text-transform: uppercase; color: #fff; letter-spacing: 1px; background: url('../images/h1-bg.png') no-repeat center bottom; padding-bottom: 30px; font-weight: bold; }
-.intro-title-info { text-transform: uppercase; color: #fff; font-weight: bold; }
+.intro-title { font-size: 15px; text-transform: uppercase; color: #fff; letter-spacing: 1px; background: url('../images/h1-bg.png') no-repeat center bottom; padding-bottom: 30px; font-weight: bold; text-shadow: 2px 2px #3c1206; }
+.intro-title-info { text-transform: uppercase; color: #fff; font-weight: bold; text-shadow: 2px 2px #3c1206; }
 h1.arrow { font-size: 15px; text-transform: uppercase; color: #353535; letter-spacing: 1px; background: url('../images/h1-bg.png') no-repeat center bottom; padding-bottom: 30px; font-weight: bold; }
 /* ==========================================================================
 Features
@@ -246,9 +246,9 @@ Swag
 ========================================================================== */
 .swag { background: url('../images/agroindustria.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; padding: 50px 0; }
 .reason { background: url('../images/reason.jpg') no-repeat center bottom; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; padding: 50px 0; }
-.swag h1 { color: #fff; text-transform: uppercase; letter-spacing: 5px; }
+.swag h1 { color: #fff; text-transform: uppercase; letter-spacing: 5px; font-weight: bold; text-shadow: 2px 2px #3c1206; }
 .swag h1 span { display: block; font-size: 25px; margin-top: 10px; }
-.reason p { color: #fff; font-weight: bold; text-shadow: 1px 1px #3c1206; }
+.reason p { color: #fff; font-weight: bold; text-shadow: 2px 2px #3c1206; }
 .reason h1 { color: #fff; text-transform: uppercase; letter-spacing: 5px; }
 .reason h1 span { display: block; font-size: 25px; margin-top: 10px; }
 .reason intro-title-reason { text-transform: uppercase; color: #fff; font-weight: bold; }
@@ -338,5 +338,9 @@ Custom 3D Link
 .enterprises-img { 	height: 250px !important; }
 .adjust-img { width: 80%; }
 .sub-title { color: #3c1206 !important; }
-
+.team-country { color: #8c9398; }
+#web-nav { display: none; }
+.navbar { border-radius: 0px !important; }
+div#productSlider ul.slides li div.wp5 img { width: 100% !important; height: 300px; }
 @media (max-width: 480px) { .hero h1 span { font-size: 0.5em; } .inner { padding-top: 15%; }}
+/* @media (min-width: 980px) { #web-nav { display: flex; } nav>.top-nav, #nav-toggle { display: none; }} */

@@ -140,4 +140,62 @@ $(window).load(function() {
 		}
 	});
 
+	$('#internationalSlider').flexslider({
+		animation: "slide",
+		directionNav: false,
+		controlNav: true,
+		touch: true,
+		pauseOnHover: true,
+		start: function() {
+			$.waypoints('refresh');
+		}
+	});
+
+	$('#productSlider').flexslider({
+		animation: "slide",
+		directionNav: false,
+		controlNav: true,
+		touch: true,
+		pauseOnHover: true,
+		start: function() {
+			$.waypoints('refresh');
+		}
+	});
+
+	$('#valuesSlider').flexslider({
+		animation: "slide",
+		directionNav: false,
+		controlNav: true,
+		touch: true,
+		pauseOnHover: true,
+		start: function() {
+			$.waypoints('refresh');
+		}	
+	});
+
 });
+
+var myIndex = 0;
+
+function carousel() {
+	myIndex++;
+	if (myIndex > 5) {myIndex = 1}
+	switch(myIndex) {
+		case 1:
+			document.getElementById("hero").style.backgroundImage = "url('../images/reasons.jpg')";
+			break;
+		case 2:
+			document.getElementById("hero").style.backgroundImage = "url('../images/bg-grass.jpeg')";
+			break;
+		case 3:
+			document.getElementById("hero").style.backgroundImage = "url('../images/bg-route.jpg')";
+			break;
+		case 4:
+			document.getElementById("hero").style.backgroundImage = "url('../images/bg-train.jpg')";
+			break;
+		case 5:
+			document.getElementById("hero").style.backgroundImage = "url('../images/reason.jpg')";
+			break;
+	}
+	setTimeout(carousel, 5000); // Change image every 5 seconds	
+}
