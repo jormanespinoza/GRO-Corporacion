@@ -21,7 +21,7 @@
         <header id="home">
             <nav>
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row" id="mobile-menu">
                         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
                             <nav class="pull">
                                 <ul class="top-nav">
@@ -38,6 +38,38 @@
                             </nav>
                         </div>
                     </div>
+
+                    <!-- Menu -->
+                    <nav class="navbar navbar-default" id="web-menu">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">
+                                    GRO Corporación
+                                </a>
+                            </div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">La Empresa <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#intro">Acerca de Nosotros</a></li>
+                                        <li><a href="#our-reason">Nuestra Razón de Ser</a></li>
+                                        <li><a href="#responsive">Valores</a></li>
+                                        <li><a href="#team">Nuestro Equipo</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#values">¿Qué valoramos?</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unidades <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#features">Producción Nacionales</a></li>
+                                        <li><a href="#features-abroad">Producción Internacionales</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#products">Productos</a></li>
+                                <li><a href="#contact">Contáctanos</a></li>
+                            </ul>
+                        </div><!-- /.container-fluid -->
+                    </nav>
                 </div>
 
                 <section class="hero" id="hero">
@@ -112,24 +144,22 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="arrow">Unidades de Producción Nacionales</h1>
+                        <img src="./images/img/venezuela_flag.png" width="50" />
                         <div class="features-wrapper">
                             <div class="col-md-4 wp2">
                                 <img src="{{ asset('images/quinaroes.jpg') }}" class="enterprises-img">
-
                                 <p>
                                     Se encarga de la comercialización productos manufacturados y semi manufacturados nacionales e importados del sector agroindustrial, ganadero y alimenticio destinados a satisfacer demandas del mercado nacional e internacional.
                                 </p>
                             </div>
                             <div class="col-md-4 wp2 delay-05s">
                                 <img src="{{ asset('images/acarigua.jpg')}}" class="enterprises-img">
-
                                 <p>
                                     Especializada en la importación y exportación de productos agroindustriales, alimenticios, medicinales de uso veterinario y manufacturar cereales y granos destinados al uso y consumo del mercado nacional e internacional.
                                 </p>
                             </div>
                             <div class="col-md-4 wp2 delay-1s">
                                 <img src="{{ asset('images/tranquero.jpg')}}" class="enterprises-img">
-
                                 <p>
                                     Fomenta la producción y crianza de ganado bovino ofreciendo al mercado sus derivados, así como los insumos necesarios que propicien su desarrollo, contribuyendo con el crecimiento del país, clientes y población en general.
                                 </p>
@@ -361,22 +391,22 @@
                                     Aplicada en este caso al mercadeo y ventas de productos alimenticios manufacturados (nacionales e importados) para el consumo humano, maquinarias de manufactura y empaque para el  sector agroindustrial,, orientados al mercado  panameño y nacional.
                                 </p>
                             </div>  --}}
-                            <div class="col-md-2 wp2 delay-1s">
+                            <div class="col-md-4 wp2 delay-1s">
                                 <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
                             </div>
-                            <div class="col-md-2 wp2 delay-1s">
+                            <div class="col-md-4 wp2 delay-1s">
                                 <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
                             </div>
-                            <div class="col-md-2 wp2 delay-1s">
+                            <div class="col-md-4 wp2 delay-1s">
                                 <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
                             </div>
-                            <div class="col-md-2 wp2 delay-1s">
+                            <div class="col-md-4 wp2 delay-1s">
                                 <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
                             </div>
-                            <div class="col-md-2 wp2 delay-1s">
+                            <div class="col-md-4 wp2 delay-1s">
                                 <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
                             </div>
-                            <div class="col-md-2 wp2 delay-1s">
+                            <div class="col-md-4 wp2 delay-1s">
                                 <img src="{{ asset('images/agroven.jpg')}}" class="enterprises-img">
                             </div>
                             <div class="clearfix"></div>
@@ -385,6 +415,7 @@
                 </div>
             </div>
         </section>
+
 
         <div class="ignite-cta text-center">
           <div class="container">
@@ -405,7 +436,7 @@
             </div>
 
             <div class="row">
-                <div id="productSlider">
+                <div id="productSlider" class="visible-md visible-lg">
                     <ul class="slides">
                         <li>
                             <div class="col-md-6 wp5">
@@ -453,6 +484,45 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="slides visible-xs visible-sm">
+                    <div class="col-md-6 wp5">
+                        <a href="#" target="_blank">
+                            <img src="{{ asset('images/DummyFrijolesNegros.jpg') }}" alt="Pruducto-GRO" class="img-responsive">
+                            <h2>Frijoles Negros</h2>
+                        </a>
+                    </div>
+                    <div class="col-md-6 wp5 delay-05s">
+                        <a href="#" target="_blank">
+                            <img src="{{ asset('images/DummyFrijolesRojos.jpg') }}" alt="Pruducto-GRO" class="img-responsive">
+                            <h2>Frijoles Rojos</h2>
+                        </a>
+                    </div>
+                    <div class="col-md-6 wp5">
+                        <a href="#" target="_blank">
+                            <img src="{{ asset('images/DummyGarbanzos.jpg') }}" alt="Pruducto-GRO" class="img-responsive">
+                            <h2>Garbanzos</h2>
+                        </a>
+                    </div>
+                    <div class="col-md-6 wp5 delay-0.5s">
+                        <a href="#" target="_blank">
+                            <img src="{{ asset('images/DummyLentejas.jpg') }}" alt="Pruducto-GRO" class="img-responsive">
+                            <h2>Lentejas</h2>
+                        </a>
+                    </div>
+                    <div class="col-md-6 wp5">
+                        <a href="#" target="_blank">
+                            <img src="{{ asset('images/DummyHarinaMaizFina.jpg') }}" alt="Pruducto-GRO" class="img-responsive">
+                            <h2>Harina de Maíz Fina</h2>
+                        </a>
+                    </div>
+                    <div class="col-md-6 wp5 delay-05s">
+                        <a href="#" target="_blank">
+                            <img src="{{ asset('images/DummyInstantOats-Avena.jpg') }}" alt="Pruducto-GRO" class="img-responsive">
+                            <h2>Avena</h2>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -475,99 +545,181 @@
             </div>
 
             <div class="row">
-              <div class="team-wrapper">
-                <div id="teamSlider">
-                  <ul class="slides">
-                    <li>
-                      <div class="col-md-4 wp5">
-                        <img src="{{ asset('images/team-01.png') }}" alt="Team Member">
-                        <h2>Jon Snow</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                          <p class="team-country">Sede - Country</p>
-                        </div>
-                      </div>
+                <div class="team-wrapper">
+                    <div id="teamSlider" class="visible-md visible-lg">
+                        <ul class="slides">
+                            <li>
+                                <div class="col-md-4 wp5">
+                                    <img src="{{ asset('images/team-01.png') }}" alt="Team Member">
+                                    <h2>Jon Snow</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                    <div class="social">
+                                            <ul class="social-buttons">
+                                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                        <p class="team-country">Sede - Country</p>
+                                    </div>
+                                </div>
 
-                      <div class="col-md-4 wp5 delay-05s">
-                        <img src="{{ asset('images/team-02.png') }}" alt="Team Member">
-                        <h2>Cersei Lannister</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                          <p class="team-country">Sede - Country</p>
-                        </div>
-                      </div>
+                                <div class="col-md-4 wp5 delay-05s">
+                                    <img src="{{ asset('images/team-02.png') }}" alt="Team Member">
+                                    <h2>Cersei Lannister</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                    <div class="social">
+                                        <ul class="social-buttons">
+                                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                        <p class="team-country">Sede - Country</p>
+                                    </div>
+                                </div>
 
-                      <div class="col-md-4 wp5 delay-1s">
-                        <img src="{{ asset('images/team-03.png') }}" alt="Team Member">
-                        <h2>Jamie Lannister</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                          <p class="team-country">Sede - Country</p>
-                        </div>
-                      </div>
-                    </li>
+                                <div class="col-md-4 wp5 delay-1s">
+                                    <img src="{{ asset('images/team-03.png') }}" alt="Team Member">
+                                    <h2>Jamie Lannister</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                    <div class="social">
+                                        <ul class="social-buttons">
+                                        <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                        <p class="team-country">Sede - Country</p>
+                                    </div>
+                                </div>
+                            </li>
 
-                    <li>
-                      <div class="col-md-4 wp5">
-                        <img src="{{ asset('images/team-01.png') }}" alt="Team Member">
-                        <h2>Jon Snow</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                          <p class="team-country">Sede - Country</p>
+                            <li>
+                                <div class="col-md-4 wp5">
+                                    <img src="{{ asset('images/team-01.png') }}" alt="Team Member">
+                                    <h2>Jon Snow</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                    <div class="social">
+                                        <ul class="social-buttons">
+                                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                        <p class="team-country">Sede - Country</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 wp5 delay-05s">
+                                    <img src="{{ asset('images/team-02.png') }}" alt="Team Member">
+                                    <h2>Cersei Lannister</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                    <div class="social">
+                                        <ul class="social-buttons">
+                                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                        <p class="team-country">Sede - Country</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 wp5 delay-1s">
+                                    <img src="{{ asset('images/team-03.png') }}" alt="Team Member">
+                                    <h2>Jamie Lannister</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                                    <div class="social">
+                                        <ul class="social-buttons">
+                                        <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                        <p class="team-country">Sede - Country</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="visible-xs visible-sm">
+                        <div class="col-md-4 wp5">
+                            <img src="{{ asset('images/team-01.png') }}" alt="Team Member">
+                            <h2>Jon Snow</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                            <div class="social">
+                                <ul class="social-buttons">
+                                    <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                                <p class="team-country">Sede - Country</p>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-md-4 wp5 delay-05s">
-                        <img src="{{ asset('images/team-02.png') }}" alt="Team Member">
-                        <h2>Cersei Lannister</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                          <p class="team-country">Sede - Country</p>
+
+                        <div class="col-md-4 wp5 delay-05s">
+                            <img src="{{ asset('images/team-02.png') }}" alt="Team Member">
+                            <h2>Cersei Lannister</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                            <div class="social">
+                                <ul class="social-buttons">
+                                    <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                                <p class="team-country">Sede - Country</p>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-md-4 wp5 delay-1s">
-                        <img src="{{ asset('images/team-03.png') }}" alt="Team Member">
-                        <h2>Jamie Lannister</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                        <div class="social">
-                          <ul class="social-buttons">
-                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                          </ul>
-                          <p class="team-country">Sede - Country</p>
+
+                        <div class="col-md-4 wp5 delay-1s">
+                            <img src="{{ asset('images/team-03.png') }}" alt="Team Member">
+                            <h2>Jamie Lannister</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                            <div class="social">
+                                <ul class="social-buttons">
+                                    <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                                <p class="team-country">Sede - Country</p>
+                            </div>
                         </div>
-                      </div>
-                    </li>
-                  </ul>
+                        <div class="col-md-4 wp5">
+                            <img src="{{ asset('images/team-01.png') }}" alt="Team Member">
+                            <h2>Jon Snow</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                            <div class="social">
+                                <ul class="social-buttons">
+                                    <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                                <p class="team-country">Sede - Country</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 wp5 delay-05s">
+                            <img src="{{ asset('images/team-02.png') }}" alt="Team Member">
+                            <h2>Cersei Lannister</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                            <div class="social">
+                                <ul class="social-buttons">
+                                    <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                                <p class="team-country">Sede - Country</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 wp5 delay-1s">
+                            <img src="{{ asset('images/team-03.png') }}" alt="Team Member">
+                            <h2>Jamie Lannister</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+                            <div class="social">
+                                <ul class="social-buttons">
+                                    <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                                <p class="team-country">Sede - Country</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
 
         <section class="dark-bg text-center section-padding contact-wrap" id="contact">

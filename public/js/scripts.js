@@ -179,7 +179,7 @@ var myIndex = 0;
 
 function carousel() {
 	myIndex++;
-	if (myIndex > 5) {myIndex = 1}
+	if (myIndex > 5) { myIndex = 1 }
 	switch(myIndex) {
 		case 1:
 			document.getElementById("hero").style.backgroundImage = "url('../images/reasons.jpg')";
@@ -197,5 +197,5 @@ function carousel() {
 			document.getElementById("hero").style.backgroundImage = "url('../images/reason.jpg')";
 			break;
 	}
-	setTimeout(carousel, 5000); // Change image every 5 seconds	
+	setTimeout(carousel, 6000); // Change image every 5 seconds	
 }
