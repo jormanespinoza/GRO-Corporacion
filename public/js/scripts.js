@@ -1,3 +1,4 @@
+var browser_mobile = (/android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
 /***************** Waypoints ******************/
 
 $(document).ready(function() {
@@ -33,6 +34,22 @@ $(document).ready(function() {
 		offset: '75%'
 	});
 
+	// Slider Home
+	/*
+	$(".bxslider li").each(function(i) {
+		$(this).backstretch($(this).attr('data-bg'));
+	});
+	
+	var hSlider = $('.bxslider').bxSlider({
+		pager: false,
+		auto: (($('.bxslider li').length>1)?true:false),
+		speed: 500,
+		pause: 4000,
+		mode: 'fade',
+		responsive: true,
+	});
+	*/
+
 });
 
 /***************** Slide-In Nav ******************/
@@ -42,7 +59,6 @@ $(window).load(function() {
 	$('.nav_slide_button').click(function() {
 		$('.pull').slideToggle();
 	});
-
 });
 
 /***************** Smooth Scrolling ******************/
@@ -100,13 +116,18 @@ $(document).ready(function(){
         .mouseleave(function(){
             $(this).removeClass("hover");
         });
-    }
+	}
+	createMap();
 });
+
+$(window).resize(function() {
+	// hSlider.reloadSlider(); // Reload slider on screen resized
+});
+
 
 /***************** Flexsliders ******************/
 
 $(window).load(function() {
-
 	$('#portfolioSlider').flexslider({
 		animation: "slide",
 		directionNav: false,
@@ -117,7 +138,7 @@ $(window).load(function() {
 			$.waypoints('refresh');
 		}
 	});
-
+	createMap();
 	$('#servicesSlider').flexslider({
 		animation: "slide",
 		directionNav: false,
@@ -174,6 +195,224 @@ $(window).load(function() {
 	});
 
 });
+
+function createMap() {
+	var centerDesktop = new google.maps.LatLng(10.484559, -66.8564348,17);
+	var centerMobile = new google.maps.LatLng(10.484559, -66.8564348,17);
+	
+	var mymap = document.getElementById('gmap'),
+		map_options = {
+			zoom: (browser_mobile)?14:15,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			scrollwheel: false,
+			center: (browser_mobile)?centerMobile:centerDesktop,
+			styles: [
+			    {
+					"featureType": "all",
+					"elementType": "labels.text.fill",
+					"stylers": [
+						{
+							"saturation": "100"
+						},
+						{
+							"color": "#542d1e"
+						},
+						{
+							"lightness": "-8"
+						}
+					]
+				},
+				{
+					"featureType": "all",
+					"elementType": "labels.text.stroke",
+					"stylers": [
+						{
+							"visibility": "on"
+						},
+						{
+							"color": "#987563"
+						},
+						{
+							"lightness": 16
+						}
+					]
+				},
+				{
+					"featureType": "all",
+					"elementType": "labels.icon",
+					"stylers": [
+						{
+							"visibility": "off"
+						},
+						{
+							"color": "#542d1e"
+						}
+					]
+				},
+				{
+					"featureType": "administrative",
+					"elementType": "geometry.fill",
+					"stylers": [
+						{
+							"color": "#7e5b4c"
+						},
+						{
+							"lightness": 20
+						}
+					]
+				},
+				{
+					"featureType": "administrative",
+					"elementType": "geometry.stroke",
+					"stylers": [
+						{
+							"color": "#7e5b4c"
+						},
+						{
+							"lightness": 17
+						},
+						{
+							"weight": 1.2
+						}
+					]
+				},
+				{
+					"featureType": "landscape",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#876454"
+						},
+						{
+							"lightness": 20
+						}
+					]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#a6816f"
+						},
+						{
+							"lightness": 21
+						}
+					]
+				},
+				{
+					"featureType": "poi.park",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#a6816f"
+						},
+						{
+							"lightness": 21
+						}
+					]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry.fill",
+					"stylers": [
+						{
+							"color": "#987563"
+						},
+						{
+							"lightness": 17
+						}
+					]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry.stroke",
+					"stylers": [
+						{
+							"color": "#987563"
+						},
+						{
+							"lightness": 29
+						},
+						{
+							"weight": 0.2
+						}
+					]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "labels.text.fill",
+					"stylers": [
+						{
+							"color": "#562c19"
+						}
+					]
+				},
+				{
+					"featureType": "road.arterial",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#987563"
+						},
+						{
+							"lightness": 18
+						}
+					]
+				},
+				{
+					"featureType": "road.local",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#987563"
+						},
+						{
+							"lightness": 16
+						}
+					]
+				},
+				{
+					"featureType": "transit",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#987563"
+						},
+						{
+							"lightness": 19
+						}
+					]
+				},
+				{
+					"featureType": "water",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#7e5b4c"
+						},
+						{
+							"lightness": 17
+						}
+					]
+				}
+			]
+		};
+	
+	map = new google.maps.Map(mymap, map_options);
+	
+	var ref1 = new google.maps.Marker({
+		position: new google.maps.LatLng(10.484559, -66.8564348,17),
+		map:map,
+		icon: {
+			anchor: new google.maps.Point(60, 100),
+			url: './images/map-marker.png',
+			size: new google.maps.Size(50, 50),
+			scaledSize: new google.maps.Size(50,50)
+		},
+		title: 'GRO Corporación'
+	});
+}
 
 var myIndex = 0;
 

@@ -180,6 +180,7 @@ h2::after { content: " "; border: solid 2px #3c1206; display: block; width: 35px
 .dark-bg { background: #f3f5f8; }
 .light-bg { background-color: #fff; }
 .dark-box { background: #f3f5f8; -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; -moz-box-shadow: 0px 3px 0px 0px #f0f2f4; box-shadow: 0px 3px 0px 0px #f0f2f4; }
+.light-box-map { background-color: #fff; -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; -moz-box-shadow: 0px 3px 0px 0px #f0f2f4; box-shadow: 0px 3px 0px 0px #f0f2f4; padding: 0px 0; }
 .light-box { background-color: #fff; -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; -moz-box-shadow: 0px 3px 0px 0px #f0f2f4; box-shadow: 0px 3px 0px 0px #f0f2f4; padding: 20px 0; }
 .light-box:hover, .light-box:focus { -webkit-box-shadow: 0px 3px 0px 0px #3c1206; -moz-box-shadow: 0px 3px 0px 0px #3c1206; box-shadow: 0px 3px 0px 0px #3c1206; }
 .box-hover { transition: all 500ms ease-in-out; -webkit-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; -o-transition: all 500ms ease-in-out; }
@@ -430,4 +431,53 @@ nav ul li a:hover {
 	#web-menu {
 		display: none;
 	}
+}
+/*
+.slider {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0;
+}
+.bx-viewport, .bx-wrapper{
+    position:relative;
+    width:100%;
+    height:100vh;
+    left:0;
+}
+.bxslider, .bxslider li {
+    height: 100%;
+}
+.bx-wrapper .bx-viewport {
+    border: none;
+}
+.bx-wrapper img {
+	width: 100%;
+}
+background: url('../images/bg-urao.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 65px 0 300px 0; height: auto;
+*/
+
+#gmap {
+	width: 100%;
+	height: 300px;
+}
+#web-menu .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed;
+    background-color: #3c1105;
+    height: 50px;
+    z-index: 9998; /* makes sure it stays on top */
+    border-radius: 0;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    left: 0; 
+}
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 15px;
+}
+.navbar-nav.navbar-right:last-child {
+    margin-right: 15px;
 }

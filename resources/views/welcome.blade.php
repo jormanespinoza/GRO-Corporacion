@@ -12,6 +12,7 @@
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet">
+        {{--  <link href="{{ asset('css/jquery.bxslider.css') }}" rel="stylesheet">  --}}
         <link href="{{ asset('css/queries.css') }}" rel="stylesheet">
         <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
         <script src="https://use.fontawesome.com/fb81e86df5.js"></script>
@@ -91,6 +92,17 @@
                             </div>
                         </div>
                     </div>
+                     <!-- Slider Home
+                    <div class="slider">
+                        <ul class="bxslider">
+                            <li data-bg="./images/reasons.jpg"></li>
+                            <li data-bg="./images/bg-grass.jpeg"></li>
+                            <li data-bg="./images/bg-route.jpg"></li>
+                            <li data-bg="./images/bg-train.jpg"></li>
+                            <li data-bg="./images/reason.jpg"></li>
+                        </ul>
+                    </div>
+                    -->
                 </section>
             </nav>
         </header>
@@ -144,7 +156,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="arrow">Unidades de Producción Nacionales</h1>
-                        <img src="./images/img/venezuela_flag.png" width="50" />
+                        <img src="./images/venezuela_flag.png" width="50" />
                         <div class="features-wrapper">
                             <div class="col-md-4 wp2">
                                 <img src="{{ asset('images/quinaroes.jpg') }}" class="enterprises-img">
@@ -731,13 +743,18 @@
                     </div>
                 </div>
                 <div class="row contact-details">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
+                        <div class="light-box-map box-hover">
+                            <div id="gmap"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
                         <div class="light-box box-hover">
                             <h2><i class="fa fa-map-marker"></i><span>Dirección</span></h2>
                             <p>Av. La Estancia, C.C. Ciudad Tamanaco, Chuao, Piso 2, Torre D, Oficina D220.<br>Caracas - Venezuela</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="light-box box-hover">
                             <h2><i class="fa fa-mobile"></i><span>Teléfono</span></h2>
                             <p>+58 212 959 59 05</p>
@@ -770,12 +787,15 @@
             </div>
         </footer>
         <!-- javascript -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCodStO4N4_7EhaJdmP565V6Kc_mql0CW0" xmlns=""></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="{{ asset('js/waypoints.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('js/scripts.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+        {{--  <script src="{{ asset('js/jquery.bxslider.js') }}"></script>  --}}
         <script src="{{ asset('js/jquery.flexslider.js') }}"></script>
         <script src="{{ asset('js/modernizr.js') }}"></script>
+        <script src="{{ asset('js/scripts.js') }}"></script>
     </body>
 </html>
